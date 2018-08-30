@@ -43,7 +43,7 @@ public class TCPServerService extends Service {
 
         @Override
         public void run() {
-            ServerSocket serverSocket =null;
+            ServerSocket serverSocket = null;
             try{
                 serverSocket = new ServerSocket(8688);//监听本地8688端口
 
@@ -64,7 +64,7 @@ public class TCPServerService extends Service {
                             }catch (IOException e){
                                 e.printStackTrace();
                             }
-                        };
+                        }
                     }.start();
                 }catch (IOException e){
                     e.printStackTrace();
@@ -87,8 +87,8 @@ public class TCPServerService extends Service {
             }
             int i=new Random().nextInt(mDefinedMessages.length);
             String msg=mDefinedMessages[i];
-            out.println(msg);
-            System.out.println("send:"+msg);
+
+            System.out.println("send:"+msg); out.println(msg);
         }
         System.out.println("client quit.");
 
